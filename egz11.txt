@@ -107,33 +107,99 @@ ruchem) sprawdza siê w przypadku niedu¿ego ruchu.
 na ten temat, jeœli znasz te opinie. Jakiego typu s¹ to obawy?
 
 Zaletami obliczeñ w chmurze s¹:
-- ³atwoœæ dostêpu do infrastruktury
+- ³atwoœæ dostêpu do infrastruktury oraz konfiguracji -- maszyny stoj¹
+  gotowe do u¿ytku, czêsto wystarczy tylko uruchomiæ program;
 - *SLA* -- umowa miêdzy w³aœcicielem chmury a u¿ytkownikiem mówi¹ca O
   minimalnym poziomie œwiadczenia us³ug (np. minimalna przepustowoœæ ³¹cza)
-- dostêp do ogromnej mocy obliczeniowej
-- szerokoœæ dostêpnych ofert na rynku - Google Compute Engine, AWS  iwiele
-  innych; w tym wachlarz mo¿liwoœci i trybów p³acenia (np. p³atnoœæ za u¿ycie)
-- du¿a niezawodnoœæ
+- dostêp do ogromnej mocy obliczeniowej;
+- mnogoœæ dostêpnych ofert na rynku -- Google Compute Engine, AWS  i wiele
+  innych (w tym wachlarz mo¿liwoœci i trybów p³acenia np. p³aæ za u¿ycie);
+- du¿a niezawodnoœæ;
+- wysokoprzepustowe ³¹cza i wysokiej jakoœci sprzêt;
+
+Wadami:
+- ograniczone mo¿liwoœci konfiguracyjne -- czêsto tylko przez API 
+  udostêpnione przez dostawców; im ono obszerniejsze tym wiêkszy ha³as
+  w plikach konfiguracyjnych;
+- brak kompatybilnoœci miêdzy dostawcami oraz ograniczona elastycznoœæ;
+- czêsto koniecznoœæ udostêpnianai danych zewnêtrznym serwisom;
+- o ile prêdkoœæ ³¹cza wewn¹trz chmury jest ogromna, o tyle komunikacja
+  miêdzy klientem a chmur¹ jest ograniczona, co mo¿e prowadziæ do dodatkowych
+  kosztów;
+- zmiany w infrastrukturze mog¹ byæ narzucone przez dostawcê;
+- koniecznoœæ zaufania dostawcy w kwestii bezpieczeñstwa poufnych danych
 
 Zestaw B.
 ----------------------------------------------------------------------------
 1. Który stos protoko³ów jest najczêœciej u¿ywany w Internecie? Podaj
 jego g³ówne elementy i ich przeznaczenie?
 
+Najczêœciej wykorzystywanym jest model TCP/IP, który w odró¿nieniu od modelu
+OSI sk³ada siê z 4 warst, a jego kluczowymi protoko³ami s¹:
+- IP -- do adresowania urz¹dzeñ w sieci, kontroli przepustowoœci, odkrywania
+  urz¹dzeñ, rozg³aœniania komunikatów i wielu innych
+- TCP -- do utworzenia trwa³ego (ale nie permamentnego) kana³u komunikacji,
+  z mo¿liwoœci¹ zapewnienia dostarczenia pakietów i odebrania. U¿ywany czêsto
+  do transmisji stron internetowych.
+
+Dodatkowo mo¿na wykorzystaæ protoko³y HTTP, FTP, SMPT, DNS, NFS i inne
+w najwy¿szej warstwie. Czêsto zamaist TCP stosuje siê UDP, które nie
+gwarantuje dostarczenia datagramów, ale jest szybsze i "l¿ejsze" -- dlatego
+mo¿na siê z nim czêsto spotkaæ w grach.
+
 ----------------------------------------------------------------------------
 2. Podaj dok³adn¹ definicjê spójnoœci sekwencyjnej oraz naszkicuj dwa
 s³absze od niej typy spójnoœci. Gdzie mo¿na je zastosowaæ?
 
+Dok³adnej definicji nie pamiêtam, ale ogólnie chodzi o to, ¿e równoleg³e
+procesy czytaj¹ce z i pisz¹ce do pamiêci musz¹ koñczyæ siê takim z samym
+wynikiem, jeœli byœmy dowolnie przepletli instrukcje w tych procesach
+(zachowuj¹c wzglêdn¹ relacjê instrukcji wewn¹trz procesu).
+
+S³absze typy spójnoœci to zwyczajna spójnoœæ(? ang. casual consistency),
+gdzie zapisy, które mog¹ zale¿eæ musz¹ byæ widziane przez ka¿dy proces w tej
+samej kolejnoœci, oraz spójnoœæ ewentualna (ang. eventual consistency), gdzie
+jedynie wynik musi byæ zgodny. Powy¿ysze typóy spójnoœci maj¹ zastosowanie
+na przyk³ad w analizie operacji na bazach danych.
+
 ----------------------------------------------------------------------------
 3. Co oznacza termin „sieæ nak³adkowa”? A sieæ logiczna?
 
+Sieæ nak³adkowa jest "na³o¿ona" na inn¹ sieæ. Wierzcho³ki w takiej sieci s¹
+po³¹czone wirtualnymi krawêdziami, które mog¹ w rzeczywistoœci sk³adaæ siê
+z wielu fizycznych ³¹czy tworz¹cych sieæ pod sieci¹ nak³adkow¹. Najbardziej
+znane przyk³ady to model klient-serwer lub sieœ P2P.
+
+Sieæ logiczna to inaczej pewna reprezentacja sieci, wiêc sieæ nak³adkowa
+jest w szczególnoœci sieci¹ logiczn¹.
+
 ----------------------------------------------------------------------------
 4. TMR to... -- dokoñcz zdanie i wyjaœnij, jak dzia³a TMR.
+
+and. Tripple Modular Redundancy - mechanizm zwielokrotniania operacji pomiêdzy
+trzy niezale¿ne procesy. Ostateczny wynik zostaje wybrany na podstawie 
+g³osowania wiêkszoœci z trzech "g³osuj¹cych". W przypadku braku wiêkszoœci
+wynik jest nieokreœlony. Trzeba pamiêtaæ, ¿e "g³osuj¹cy" s¹ równie¿ pewnymi
+urz¹dzeniami, które tak jak procesy podlegaj¹ awarii, wiêc optymalnie jest
+stosowaæ równie¿ trójkê g³osuj¹cych, a nie jednego.
 
 ----------------------------------------------------------------------------
 5. Jak dzia³a atak okreœlany jako przepe³nieniu bufora? Jak siê zapobiega
 atakom tego typu?
 
+Przepe³nienie bufora (ang. *buffer overflow*) polega na zapisaniu komórek
+pamiêci, które nie zosta³y zarezerwowane przez program. Za³ó¿my, ¿e utworzy-
+liœmy tablicê o piêciu elementach, a próbujemy zapisaæ coœ w miejsce
+(nieistniej¹cego) elementu szóstego. Skutkuje to nadpisaniem pamiêci poza
+zarezerwowanym buforem, a w rezultacie do b³êdnego dzia³ania programu. W 
+jêzykach bez ochrony pamiêci takie dzia³anie mo¿e doprowadziæ do wykradania
+lub nadpisywania poufnych danych, a czêsto nawet do wykonania wrogiego kodu
+na urz¹dzeniu. Aby zapobiegaæ takim atakom warto stosowaæ jêzyki
+programowania wspieraj¹ce ochronê pamiêci (gdzie dostêp do niezarezerwowanych
+adresów koñczy siê wyj¹tkiem) lub stosowaæ zewnêtrzne narzêdzia do wykrywania
+i zapobiegania takim atakom.
+
+Oczywiœcie mo¿na równie¿ pisaæ poprawne programy...
 
 Zestaw C.
 ----------------------------------------------------------------------------
@@ -147,6 +213,13 @@ pod³¹czone do sieci.
 ----------------------------------------------------------------------------
 3. Leslie Lamport ma znaczne zas³ugi w rozwoju SR. Podaj kilka
 przyk³adów na poparcie tej tezy.
+
+Po pierwsze, jest Noblist¹.
+Po drugie, wprowadzi³ termin relacji happens-before.
+Po trzecie, wymyœli³ zegary logiczne (o tym ju¿ pisa³em).
+Po czwarte, opisa³ typy spójnoœci równoleg³ych procesów.
+I wiele innych, ale najwa¿niejsze jest prawdopodobnie to, ¿e wprowadzi³ wiele
+algorytmów, modeli i terminów do nauki o systemach rozproszonych.
 
 ----------------------------------------------------------------------------
 4. Uzasadnij rolê prostoty w budowaniu mechanizmów bezpieczeñstwa.
