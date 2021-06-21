@@ -39,15 +39,46 @@ ich twórców... od informatyków? Odpowiedz, jeœli chcesz.
 
 * nie ostatni (który?): nie pierwszy, nie ostatni raz [SJP PWN]
 
+Krocz¹ca globalizacja doprowadzi³a do du¿ego ruchu ludzi na ca³ym globie.
+O wiele ³atwiej jest wiêc przenieœæ wirusa z jednej czêsci kuli ziemskiej
+na drug¹. Obecnie wiele zamieszania wprowadzaj¹... media i szerzenie
+nieprawdziwych informacji. Sprawa nie jest czarno-bia³a. Z jednej strony,
+po³¹czenie wiêkszoœci œwiata w sieæ pozwoli³o na szybk¹ reakcjê, sprawne
+przekazywanie informacji i podejmowanie decyzji. Z drugiej strony ludzie
+charakteryzuj¹ siê o wiele wiêksz¹ mobilnoœci¹ i przywykli do wygodnego ¿ycia,
+a co za tym idzie niewielkie ograniczenie swobód obywatelskich wywiera du¿y
+wp³yw na ich poczucie wolnoœci
+
 
 Zestaw A.
 ----------------------------------------------------------------------------
 1. Do czego s³u¿¹ zegary logiczne? Kto jest ich wynalazc¹? Podaj przyk³ad
 zastosowania.
 
+Zegary logiczne s³u¿¹ miêdzy innymi do synchronizacji równoleg³ych procesów 
+oraz ustalania wzglêdnego porz¹dku zdarzeñ. Ich g³ówn¹ zalet¹ jest to, 
+¿e pozwalaj¹ na wzglêde szeregowanie zadañ wzglêdem relacji *happens-before* 
+zamiast realnego czasu (choæ i tak czas jest pojêciem wzglêdnym...)
+wprowadzonej przez Lamporta (imienia nie pamiêtam), który by³ wynalazc¹ 
+zegarów logicznych. Zegary logiczne mo¿na wykorzystywaæ np. do ustalenia 
+porz¹dku operacji wykonanych na koncie bankowym: bankier chce naliczyæ 
+odsetki od stanu konta, a klient chce wp³aciæ pieni¹dze. Bez wzglêdnego 
+szeregowania tych dwóch zdarzeñ rezultat móg³by byæ niedeterministyczny.
+
 ----------------------------------------------------------------------------
 2. Co siê rozumie przez prawdziwy identyfikator? Jakie znaczenie ma
 wprowadzanie takiej definicji?
+
+Prawdziwy identyfikator obiektu (ang. entity) musi spe³niaæ trzy wymagania:
+1. odnosiæ siê tylko do jednego obiektu;
+2. identyfikatory nie mog¹ byæ u¿ywane ponownie do identyfikacji innych 
+   obiektów;
+3. ka¿dy obiekt ma co najwy¿ej jeden prawdziwy identyfikator, który na 
+   niego wskazuje;
+Czêsto w literaturze angielskiej mówi siê o UUID. Powy¿sze trzy w³asnoœci 
+pozwalaj¹ na jednoznaczne rozpoznanie obiektu przez jego prawdziwy 
+identyfikator. Przyk³adem prawdziwego identyfikatora mo¿e byæ numer PESEL 
+obywateli, a nie mo¿e nim byæ na przyk³ad nazwisko.
 
 ----------------------------------------------------------------------------
 3. Wyjaœnij zasadê wiedzy koniecznej.
@@ -59,10 +90,30 @@ w tym samym kierunku siê koñczy. Wska¿ pewn¹ luŸn¹ analogiê miêdzy
 postêpowaniem na drogach wielopasmowych a optymistycznym sterowaniem
 wspó³bie¿noœci¹.
 
+Samochodami mog¹ byæ procesy (lub w¹tki). Transakcj¹ jest przejazd auta 
+przez ca³¹ drogê. Optymistycznie zak³adamy, ¿e samochody czêsto z powodzeniem 
+przeje¿d¿aj¹ trasê bez wzajemnego blokowania. Jeœli dochodzi do sytuacji,
+w której pas koñczy siê, auto musi zmieniæ pas ruchu. Kierowca sprawdza,
+czy pas jest wolny (co odpowiada fazie potwierdzenia transakcji). 
+Optymistycznie, kierowca nie bêdzie musia³ ustêpowaæ ani wymuszaæ 
+pierwszeñstwa, co odpowiada brakowi konfliktów w transakcji. Jeœli pas jest
+zajêty, konflikt musi byæ w jakiœ sposób rozwi¹zany (np. przez ust¹pienie
+pierwszeñstwa). W optymistycznym sterowaniu wspó³bie¿noœci¹ transakcja mo¿e
+byæ na przyk³ad cofniêta. Widaæ, ¿e taka polityka (kierowcy sami zarz¹dzaj¹
+ruchem) sprawdza siê w przypadku niedu¿ego ruchu.
+
 ----------------------------------------------------------------------------
 5. Obliczenia chmurowe -- blaski i cienie. Nakreœl kilka s³ów opinii
 na ten temat, jeœli znasz te opinie. Jakiego typu s¹ to obawy?
 
+Zaletami obliczeñ w chmurze s¹:
+- ³atwoœæ dostêpu do infrastruktury
+- *SLA* -- umowa miêdzy w³aœcicielem chmury a u¿ytkownikiem mówi¹ca O
+  minimalnym poziomie œwiadczenia us³ug (np. minimalna przepustowoœæ ³¹cza)
+- dostêp do ogromnej mocy obliczeniowej
+- szerokoœæ dostêpnych ofert na rynku - Google Compute Engine, AWS  iwiele
+  innych; w tym wachlarz mo¿liwoœci i trybów p³acenia (np. p³atnoœæ za u¿ycie)
+- du¿a niezawodnoœæ
 
 Zestaw B.
 ----------------------------------------------------------------------------
