@@ -47,7 +47,8 @@ po≥πczenie wiÍkszoúci úwiata w sieÊ pozwoli≥o na szybkπ reakcjÍ, sprawne
 przekazywanie informacji i podejmowanie decyzji. Z drugiej strony ludzie
 charakteryzujπ siÍ o wiele wiÍkszπ mobilnoúciπ i przywykli do wygodnego øycia,
 a co za tym idzie niewielkie ograniczenie swobÛd obywatelskich wywiera duøy
-wp≥yw na ich poczucie wolnoúci
+wp≥yw na ich poczucie wolnoúci. Co zrobiÊ. Nawet nie mam czasu dokoÒczyÊ
+przemyúlenia :(
 
 
 Zestaw A.
@@ -316,6 +317,15 @@ Zestaw F.
 ----------------------------------------------------------------------------
 1. OmÛw Ñproblem dwÛch armiiî. Czego ilustracjπ jest ta opowiastka?
 
+1. Genera≥ A posy≥a goÒca do armii B. 
+2. Genera≥ B odsy≥a goÒca z potwierdzeniem odebrania wiadomoúci. 
+3. Genera≥ A odsy≥a potwierdzenie-potwierdzenia
+4. ... i tak w kÛ≥o. Jeúli ktÛryú goniec nie dotrze, to nie ma pewnoúci
+   dostarczenia i potwierdzenia wiadomoúci.
+
+Nie moøna w 100% zapewniÊ, øe wiadomoúÊ zosta≥a nada i dostarczona. Nigdy.
+Moøna tylko ufaÊ, uff uff...
+
 ----------------------------------------------------------------------------
 2. Co to sπ us≥ugi nazewnicze (podaj angielskπ nazwe)? Jakπ rolÍ
 odgrywajπ w systemach rozproszonych? WymieÒ 10 typÛw obiektÛw nazywanych
@@ -342,6 +352,10 @@ miÍdzy idempotentnoúciπ operacji a semantykπ dostarczania?
 Zestaw G.
 ----------------------------------------------------------------------------
 1. OmÛw zalety i wady architektur warstwowych. 
+
+Komunikacja wymaga transmisji miÍdzy warstwami niøszπ a wyszπ, wiÍc komunikaty
+mogπ byÊ†opÛünione. Czasami wymagane jest "przeskoczenie" warstw albo
+wywa≥anie "upcalla", ktÛre wprowadza nieúcis≥oúci.
 
 ----------------------------------------------------------------------------
 2. Coú z polityki systemowej. Co to sπ algorytmy elekcji? Jakie jest ich
@@ -406,6 +420,9 @@ stosowaÊ lokalnie? Jeúli tak, to jak, a jeúli nie, to dlaczego nie?
 ----------------------------------------------------------------------------
 5. Co wiesz o Internecie? Napisz krÛtki autorski szkic.
 
+Internet - najwiÍkszy system rozproszony w dziejach i siÛdmy cud úwiata.
+èrÛd≥o nieustannej bolπczki wielu, ale rÛwnieø zbawienia wielu innych.
+NieskoÒczony potencja≥ wykorzystany w 2%.
 
 Zestaw J.
 ----------------------------------------------------------------------------
