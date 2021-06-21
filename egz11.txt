@@ -1,0 +1,417 @@
+.
+.
+
+
+
+
+
+
+                       EGZAMIN Z SYSTEMÓW ROZPROSZONYCH   
+
+               Instytut Informatyki Uniwersytetu Wroc³awskiego
+
+                             Wroc³aw, 2021-06-21 
+
+
+
+ID = 11               
+Maksymilian Polarczyk (300791)
+
+
+Uwagi. Pisz¹c odpowiedŸ, dodaj interliniê po treœci zadania. 
+Nie musisz siê ograniczaæ co do liczby wierszy, choæ zwiêz³oœæ
+i trafnoœæ jest po¿¹dana. Jeœli mo¿esz, u¿ywaj jako symbolu koñca
+wiersza pary znaków CR-LF. ¯eby zdaæ egzamin, nie musisz odnieœæ siê
+do ca³ego zgromadzonego tu materia³u. Graj uczciwie.
+
+
+----------------------------------------------------------------------------
+Zadanie 0. Systemy rozproszone zmieni³y œwiat. Ostatnie zdarzenia (zjawiska
+polityczne, ekonomiczne i spo³eczne) towarzysz¹ce nie pierwszej i nie
+ostatniej* pandemii dowodnie to potwierdzaj¹. Trzydzieœci lat temu globalna
+zaraza nie wywo³a³aby takich skutków. Dlaczego? Spróbuj odpowiedzieæ. Czy
+zatem systemy rozproszone ulepszy³y nasz byt tu i teraz, czy nie? Cz³owiek
+tworzy narzêdzia i cz³owiek ich u¿ywa. Jak wiele innych wynalazków,
+rozwi¹zañ i narzêdzi systemy rozproszone mog¹ (i tak siê dzieje) przynosiæ
+wiele dobra, byæ Ÿród³em wygód i nowych mo¿liwoœci, a jednoczeœnie mog¹ siê
+staæ (i tak siê dzieje?) Ÿród³em opresji, tak¿e mentalnej. Czy to zale¿y od
+ich twórców... od informatyków? Odpowiedz, jeœli chcesz.
+
+* nie ostatni (który?): nie pierwszy, nie ostatni raz [SJP PWN]
+
+
+Zestaw A.
+----------------------------------------------------------------------------
+1. Do czego s³u¿¹ zegary logiczne? Kto jest ich wynalazc¹? Podaj przyk³ad
+zastosowania.
+
+----------------------------------------------------------------------------
+2. Co siê rozumie przez prawdziwy identyfikator? Jakie znaczenie ma
+wprowadzanie takiej definicji?
+
+----------------------------------------------------------------------------
+3. Wyjaœnij zasadê wiedzy koniecznej.
+
+----------------------------------------------------------------------------
+4. Niedawno wesz³y w ¿ycie nowe przepisy reguluj¹ce ruch na drogach
+wielopasmowych w sytuacjach, gdy któryœ z pasów ruchu wiod¹cych
+w tym samym kierunku siê koñczy. Wska¿ pewn¹ luŸn¹ analogiê miêdzy
+postêpowaniem na drogach wielopasmowych a optymistycznym sterowaniem
+wspó³bie¿noœci¹.
+
+----------------------------------------------------------------------------
+5. Obliczenia chmurowe -- blaski i cienie. Nakreœl kilka s³ów opinii
+na ten temat, jeœli znasz te opinie. Jakiego typu s¹ to obawy?
+
+
+Zestaw B.
+----------------------------------------------------------------------------
+1. Który stos protoko³ów jest najczêœciej u¿ywany w Internecie? Podaj
+jego g³ówne elementy i ich przeznaczenie?
+
+----------------------------------------------------------------------------
+2. Podaj dok³adn¹ definicjê spójnoœci sekwencyjnej oraz naszkicuj dwa
+s³absze od niej typy spójnoœci. Gdzie mo¿na je zastosowaæ?
+
+----------------------------------------------------------------------------
+3. Co oznacza termin „sieæ nak³adkowa”? A sieæ logiczna?
+
+----------------------------------------------------------------------------
+4. TMR to... -- dokoñcz zdanie i wyjaœnij, jak dzia³a TMR.
+
+----------------------------------------------------------------------------
+5. Jak dzia³a atak okreœlany jako przepe³nieniu bufora? Jak siê zapobiega
+atakom tego typu?
+
+
+Zestaw C.
+----------------------------------------------------------------------------
+1. Pojêcia odebrania komunikatu i dostarczenia komunikatu nie s¹
+to¿same. O co chodzi?
+
+----------------------------------------------------------------------------
+2. Nazwij mo¿liwie jak najwiêcej zagro¿eñ, na która s¹ nara¿one systemy
+pod³¹czone do sieci.
+
+----------------------------------------------------------------------------
+3. Leslie Lamport ma znaczne zas³ugi w rozwoju SR. Podaj kilka
+przyk³adów na poparcie tej tezy.
+
+----------------------------------------------------------------------------
+4. Uzasadnij rolê prostoty w budowaniu mechanizmów bezpieczeñstwa.
+
+----------------------------------------------------------------------------
+5. Zapewne korzystasz w obecnych czasach z komunikacji strumieniowej. (Oby
+nie przesadnie, bo szkoda na to ¿ycia). Wyjaœnij na czym ona polega? Co to
+jest QoS?
+
+
+Zestaw D.
+----------------------------------------------------------------------------
+1. Spoœród co najmniej oœmiu aspektów branych pod uwagê przy budowaniu
+systemów rozproszonych wybierz trzy i omów najkrócej g³ówne, zwi¹zane
+z nimi problemy.
+
+----------------------------------------------------------------------------
+2. Mówimy „¿eton” (i jesteœmy dalecy od gier hazardowych). Co oznacza
+ten termin w SR? Podaj inn¹ nazwê. Gdzie znajduj¹ zastosowania ¿etony?
+
+----------------------------------------------------------------------------
+3. Wyjaœnij ogólnie dzia³anie zapór sieciowych (zapór ogniowych).
+
+----------------------------------------------------------------------------
+4. Co z wiedzy o epidemiologii wykorzystuje siê w systemach rozproszonych
+w sposób przewrotny? Na czym polega ta przewrotnoœæ? Wyjaœnij przydatnoœæ. 
+
+----------------------------------------------------------------------------
+5. Podpis cyfrowy? Jak siê go osi¹ga? A jak sprawiæ, ¿e nadawca dokumentu
+nie bêdzie siê móg³ wyprzeæ jego autorstwa? 
+
+
+Zestaw E.
+----------------------------------------------------------------------------
+1. Czym siê ró¿ni uwierzytelnianie od upowa¿niania? Które poprzedza które?
+
+----------------------------------------------------------------------------
+2. Omów rodzaje skalowalnoœci SR?
+
+----------------------------------------------------------------------------
+3. Architektura klient-serwer czy architektura partnerska? Kiedy zastosowaæ
+któr¹? Podaj po jednym przyk³adzie.
+
+----------------------------------------------------------------------------
+4. Omów zalety i wady przechowywania podrêcznego (kaszowania) w SR.
+
+----------------------------------------------------------------------------
+5. W³asnoœci transakcji zwyk³o siê zwiêŸle okreœlaæ mianem ACID.
+Wyjaœnij pochodzenie tej nazwy i omów dwie wybrane przez siebie
+w³asnoœci transakcji.
+
+
+Zestaw F.
+----------------------------------------------------------------------------
+1. Omów „problem dwóch armii”. Czego ilustracj¹ jest ta opowiastka?
+
+----------------------------------------------------------------------------
+2. Co to s¹ us³ugi nazewnicze (podaj angielsk¹ nazwe)? Jak¹ rolê
+odgrywaj¹ w systemach rozproszonych? Wymieñ 10 typów obiektów nazywanych
+w SR. Okreœl trzy warstwy przestrzeni DNS.
+
+----------------------------------------------------------------------------
+3. Gruby serwer, szczup³y klient? O co tu chodzi?
+
+----------------------------------------------------------------------------
+4. W¹tki u¿ytkownika a w¹tki j¹dra -- omów pokrótce ró¿nice miêdzy nimi. 
+
+----------------------------------------------------------------------------
+5. Operacje idempotentne -- co to takiego? W jakich sytuacjach
+idempotentnoœæ operacji ma szczególne znaczenie? Jaki jest zwi¹zek
+miêdzy idempotentnoœci¹ operacji a semantyk¹ dostarczania?
+
+
+Zestaw G.
+----------------------------------------------------------------------------
+1. Omów zalety i wady architektur warstwowych. 
+
+----------------------------------------------------------------------------
+2. Coœ z polityki systemowej. Co to s¹ algorytmy elekcji? Jakie jest ich
+zastosowanie w systemach rozproszonych? Czy istnieje w pe³ni rozproszony
+algorytm tego typu? Jaki? A scentralizowany?
+
+----------------------------------------------------------------------------
+3. Co to jest „audyt”? Jak siê go realizuje? 
+
+----------------------------------------------------------------------------
+4. Omów sposoby rozpowszechniania kluczy szyfrowania w SR.
+
+----------------------------------------------------------------------------
+5. Omów algorytm pierœcieniowy wyboru koordynatora. Mo¿e znasz jakiœ
+inny algorytm z u¿yciem pierœcienia w SR? 
+
+
+Zestaw H.
+----------------------------------------------------------------------------
+1. Czym ró¿ni siê semantyka RPC od semantyki IPC? 
+
+----------------------------------------------------------------------------
+2. (Dla praktyków). Oprogramowanie VirtualBox firmy Oracle umo¿liwia
+tworzenie maszyn wirtualnych ró¿nych systemów operacyjnych (Linuxa,
+MacOS-a i in.), w szczególnoœci systemu MS-DOS 6.22. W tym ostatnim
+nie istnia³ interfejs okien. Zwa¿ywszy na czynnik izolacji wynikaj¹cej
+z wymagañ bezpieczeñstwa VM, czy widzisz mo¿liwoœæ transferu plików i
+katalogów do wirtualnego systemu MS-DOS dzia³aj¹cego w otoczeniu maszyny
+wirtualnej w goszcz¹cym j¹ systemie Windows? W jaki sposób?
+
+----------------------------------------------------------------------------
+3. Omów protokó³ blokowania dwufazowego.
+
+----------------------------------------------------------------------------
+4. Co to s¹ funkcje jednokierunkowe i jakie jest ich zastosowanie
+w zabezpieczeniu systemów?
+
+----------------------------------------------------------------------------
+5. Trzy rodzaje ataków: przerwê, modyfikowanie i fabrykowanie (czego?)
+mo¿na uznaæ za odmianê jednego rodzaju ataku. Jakiego?
+
+
+Zestaw I.
+----------------------------------------------------------------------------
+1. Twój {ulubiony | wybrany | najlepiej {rozumiany | wyuczony}} temat z SR.
+Przestaw go pokrótce.
+
+----------------------------------------------------------------------------
+2. Skategoryzuj rodzaje wad.
+
+----------------------------------------------------------------------------
+3. Dlaczego szyfrowanie z kluczem jawnym (publicznym) nie wypar³o
+szyfrowania z kluczem tajnym, skoro nie ma w nim problemu z przekazywaniem
+klucza? 
+
+----------------------------------------------------------------------------
+4. Omów dzia³anie zdalnych wywo³añ procedur. Wska¿ problemy towarzysz¹ce
+RPC. Jeœli znasz system (jaki?), w którym zdalne wywo³ania procedur s¹
+w powszechnym u¿yciu, to go nazwij. Czy zdalne wywo³ania procedur mo¿na
+stosowaæ lokalnie? Jeœli tak, to jak, a jeœli nie, to dlaczego nie?
+
+----------------------------------------------------------------------------
+5. Co wiesz o Internecie? Napisz krótki autorski szkic.
+
+
+Zestaw J.
+----------------------------------------------------------------------------
+1. Wyjaœnij problem wzajemnie podejrzewaj¹cych siê systemów. Co oznacza
+zasada najmniejszych przywilejów? Jak¹ technik¹ mo¿na j¹ realizowaæ?
+
+----------------------------------------------------------------------------
+2. Omów zasadê rozdzia³u polityki od mechanizmu. 
+
+----------------------------------------------------------------------------
+3. Nakreœl ogólnie funkcje warstw w typowej architekturze trzypiêtrowej. 
+
+----------------------------------------------------------------------------
+4. Odmowa œwiadczenia us³ug? Atak z odbicia? Na czym polegaj¹ te ataki?
+
+----------------------------------------------------------------------------
+5. Wyjaœnij ró¿nicê miêdzy szyfrowaniem symetrycznym i asymetrycznym. Do
+czego stosuje siê ka¿de z nich? Czy nie mo¿na by poprzestaæ na jednym typie
+szyfrowania?
+
+
+Zestaw K.
+----------------------------------------------------------------------------
+1. Jak pojmujesz zasadê wszechobecnoœci w planowaniu i osi¹ganiu
+bezpieczeñstwa w SR? Wska¿ kilka poziomów zabezpieczeñ.
+
+----------------------------------------------------------------------------
+2. Podaj ogóln¹ definicjê sytuacji awaryjnej w systemie. Co to s¹ awarie
+bizantyjskie?
+
+----------------------------------------------------------------------------
+3. Prywatnoœæ {a | czy} bezpieczeñstwo? Ile czego z tych dwu? Jak rysuje
+siê przysz³oœæ w tych dwu aspektach Twoim zdaniem? Co wybierzesz, gdyby
+to by³o mo¿liwe? Masz okazjê do swobodnej wypowiedzi, poniewa¿ ka¿da
+zostanie jednakowo oceniona. (Por. zadanie 0).
+
+----------------------------------------------------------------------------
+4. Co wiesz o IR (internecie rzeczy, ang. IoT, Internet of Things)? 
+
+----------------------------------------------------------------------------
+5. Omów funkcjê adaptera obiektu? A jakie funkcje pe³ni namiastka
+procedury (ang. procedure stub)? Wska¿ konteksty u¿ywania obu pojêæ.
+
+
+Zestaw L.
+----------------------------------------------------------------------------
+1. Mówimy, ¿e systemy rozproszone umo¿liwiaj¹ tolerowanie awarii. W jaki
+sposób?
+
+----------------------------------------------------------------------------
+2. Wska¿ zagro¿enie wynikaj¹ce z cech osobowoœciowych u¿ytkowników SR.
+
+----------------------------------------------------------------------------
+3. Na czym polega maskowanie awarii? Co to znaczy „rozsy³anie
+niepodzielne”?
+
+----------------------------------------------------------------------------
+4. Uniwersalny czas koordynowany -- wyjaœnij co to za „gatunek” czasu. Jakim
+angielskim skrótowcem siê go okreœla? 
+
+----------------------------------------------------------------------------
+5. Czym ró¿ni siê dostêpnoœæ od niezawodnoœci?
+
+
+Zestaw M.
+----------------------------------------------------------------------------
+1. Tablica dostêpów -- omów ogólnie jej budowê, rodzaje wpisów i wady.
+Co w zwi¹zku z jej wadami stosuje siê w praktyce?
+
+----------------------------------------------------------------------------
+2. Przedstaw algorytm tyrana. Podaj jego angielsk¹ nazwê. Dlaczego go
+tak nazwano? Do jakiej grupy algorytmów nale¿y? Znasz inne? Jakie?
+
+----------------------------------------------------------------------------
+3. Scharakteryzuj rodzaje przezroczystoœci wêdrówki (czego?). Jakie
+dostrzegasz tutaj trudnoœci?
+
+----------------------------------------------------------------------------
+4. T³umienie sprzê¿enia zwrotnego? O co chodzi? Wyjaœnij.
+
+----------------------------------------------------------------------------
+5. Co to jest „proces osierocony”? Co robi UNIX (lub Linux)
+z osieroconymi procesami? Co z nimi robiæ w SR i dlaczego?
+
+
+Zestaw N.
+----------------------------------------------------------------------------
+1. Rozbiór iteracyjny, czy rekurencyjny? Czego dotycz¹ te pojêcia
+w kontekœcie SR? Wska¿ ró¿nice miêdzy oboma typami rozbioru.
+
+----------------------------------------------------------------------------
+2. Dlaczego w systemach rozproszonych musimy siê godziæ na os³abianie
+spójnoœci? O spójnoœæ czego chodzi? Podaj przyk³ad os³abionego modelu
+spójnoœci? 
+
+----------------------------------------------------------------------------
+3. SR: kwantowe procesory Google, lawinowe postêpy w AI, silosy gromadz¹ce
+eksabajty danych, komunikacja, dez[informacja], koronawirusy?... -- Co
+przyniesie przysz³oœæ, czyli niezamierzony „wk³ad” informatyki w... Jak
+to postrzegasz, oceniasz? Napisz kilka proroczych zdañ. (Por. zadanie 0).
+
+----------------------------------------------------------------------------
+4. Niezawodne wielonadawanie w pe³ni uporz¹dkowane –- co to takiego?
+Czy znasz s³absze warunki (typy) rozsy³ania komunikatów? Jakie?
+
+----------------------------------------------------------------------------
+5. Na czym polega maskowanie awarii?
+
+
+Zestaw O.
+----------------------------------------------------------------------------
+1. W jaki sposób klient odnajduje serwer, jeœli serwer zmienia
+usytuowanie w sieci? Uogólnij ten problem na docieranie do zasobów
+ruchomych w SR.
+
+----------------------------------------------------------------------------
+2. Zdefiniuj trzy rodzaje hiperwizorów. Maszyny wirtualne u³atwiaj¹
+konstruowanie systemów rozproszonych -- w jaki sposób? Okreœl dwa 
+typy wirtualizacji maszyn wirtualnych.
+
+----------------------------------------------------------------------------
+3. Protoko³y rozpowszechniania -- wymieñ kilka zwi¹zanych z nimi problemów
+i omów dok³adniej dwa z nich. 
+
+----------------------------------------------------------------------------
+4. Systemy otwarte? Co to takiego? A zamkniÄ™te?
+
+----------------------------------------------------------------------------
+5. Omów pokrótce warstwy standardu ISO/OSI.
+
+
+Zestaw P.
+----------------------------------------------------------------------------
+1. Czym ró¿ni siê komunikacja synchroniczna od asynchronicznej?
+
+----------------------------------------------------------------------------
+2. Migawki stanu systemu, organizacja punktów kontrolnych, rejestrowanie
+komunikatów -- czemu to s³u¿y? Co to jest efekt domino? 
+
+----------------------------------------------------------------------------
+3. Nazwij podstawowe wymagania odnosz¹ce siê do systemów spolegliwych.
+
+----------------------------------------------------------------------------
+4. Co w kontekœcie SR rozumie siê pod pojêciem warstwy poœredniej? Skoro
+mówi siê tu o warstwie, to czy i co jest poni¿ej i (lub) powy¿ej niej?
+Jeœli jest. Podaj angielskie brzmienie tego terminu.
+
+----------------------------------------------------------------------------
+5. Zapewne masz przy sobie telefon bezprzewodowy. Jak jest zorganizowana
+sieæ komunikacji komórkowej? Napisz, jeœli Ci wiadomo. A GPS? Jak dzia³a
+GPS?
+
+
+Zestaw Q.
+----------------------------------------------------------------------------
+1. Co siê rozumie w systemach operacyjnych i rozproszonych przez dzielenie
+zasobów? Podaj trzy sprzêtowe i trzy programowe rodzaje zasobów nadaj¹cych
+siê do dzielenia oraz przyk³ady ich dzielenia w systemach rozproszonych? 
+Co jest nadmiarowego w nazwie „wspó³dzielenie”? Dlaczego?
+
+----------------------------------------------------------------------------
+2. Coœ z gastronomii systemowej. Co to znaczy „sól” w uniksowych systemach
+plików, do czego i jak siê j¹ stosuje?
+
+----------------------------------------------------------------------------
+3. Co siê rozumie przez poufnoœæ, a co przez nienaruszalnoœæ
+w projektowaniu systemów bezpiecznych?
+
+----------------------------------------------------------------------------
+4. UTC? Omów drogê, która doprowadzi³a do tego standardu.
+
+----------------------------------------------------------------------------
+5. Co wiesz o standardzie komunikacji znanym pod nazw¹ gniazd? Czym
+przede wszystkim ró¿ni¹ siê protoko³y TCP/IP i UDP? Czy mo¿na ich u¿yæ
+w komunikacji gniazdowej?
+
+.
+.
+
