@@ -224,11 +224,28 @@ algorytmów, modeli i terminów do nauki o systemach rozproszonych.
 ----------------------------------------------------------------------------
 4. Uzasadnij rolê prostoty w budowaniu mechanizmów bezpieczeñstwa.
 
+Proste  mechanizmy ³atwo zrozumieæ i poprawiaæ. Im bardziej skomplikowany kod,
+tym wiêcej wysi³ku musi zostaæ w³o¿onego w jego zrozumienie i nadzorowanie.
+Im rozwi¹zanie jest prostsze, tym mniej ma b³êdów i potencjalnych wektorów
+ataku (tak siê mówi?). Jeœli przyjmiemy odsetek b³êdów w linii kodów jako
+pewn¹ sta³¹, to 5% ze 100 linii kodu to o wiele mniej ni¿ 5% z 1.000.000 
+linii kodu.
+
 ----------------------------------------------------------------------------
 5. Zapewne korzystasz w obecnych czasach z komunikacji strumieniowej. (Oby
 nie przesadnie, bo szkoda na to ¿ycia). Wyjaœnij na czym ona polega? Co to
 jest QoS?
 
+Strumieñ to po prostu sekwencja pewnych danych. Najprostszym przyk³adem jest
+transmisja meczu czy muzyki - u¿ytkownik s³ucha jej od pocz¹tku do koñca, a
+nie w czêœciach œrodek-koniec-pocz¹tek. Komunikacja taka najczêœciej odbywa
+siê z u¿yciem buforów i dwóch stron - konsumenta i producenta danych.
+Producent wysy³a do konsumenta dane i dodaje do kolejki konsumenta, które ten
+z kolei konsumuje.
+
+QoS -- Quality of Service -- protokó³ priorytetowania transmisji pakietów
+w dolnej warstwie modelu TCP/IP. Pozwala na wp³yw i kontrolê nad np.
+opóŸnienia pakietów, opóŸnieniem miêdzy dostarczeniej us³ugi itp.
 
 Zestaw D.
 ----------------------------------------------------------------------------
@@ -256,15 +273,38 @@ Zestaw E.
 ----------------------------------------------------------------------------
 1. Czym siê ró¿ni uwierzytelnianie od upowa¿niania? Które poprzedza które?
 
+Uwierzytelnia potwierdza, ¿e ktoœ mówi ¿e jest tym, kim mówi ¿e jest.
+Upowa¿nianie nadaje dostêp temu komuœ do zasobów.
+
+Uwierzytelnianie powinno poprzedzaæ upowa¿nianie
+
 ----------------------------------------------------------------------------
 2. Omów rodzaje skalowalnoœci SR?
+
+Skalowanie w pionie (zwiêkszamy jakoœæ maszyn/komponentów) oraz skalowanie
+w poziomie (dodajemy wiêcej maszyn/komponentów).
+
+Albo usuwamy, skalowaæ mo¿na równie¿ w dó³...
 
 ----------------------------------------------------------------------------
 3. Architektura klient-serwer czy architektura partnerska? Kiedy zastosowaæ
 któr¹? Podaj po jednym przyk³adzie.
 
+Klient-serwer sprawdza siê w grach komputerowych, stronach WWW, serwerach
+uwierzytelniaj¹cych. Architektura partnerska jest wykorzystywana w 
+technologii BitTorrent do przesy³ania danych w kawa³kach.
+
 ----------------------------------------------------------------------------
 4. Omów zalety i wady przechowywania podrêcznego (kaszowania) w SR.
+
+Zalety:
+- szybki dostêp do danych
+- czêsto zwiêkszenie wydajnoœci systemów o rzêdy wielkoœci
+
+Wady:
+- koniecznoœæ zapewnienia spójnoœci
+- koniecznoœæ wprowadzania zaawansowanych algorytmów usuwania danych
+  z pamiêci podrecznej
 
 ----------------------------------------------------------------------------
 5. W³asnoœci transakcji zwyk³o siê zwiêŸle okreœlaæ mianem ACID.
@@ -283,6 +323,12 @@ w SR. Okreœl trzy warstwy przestrzeni DNS.
 
 ----------------------------------------------------------------------------
 3. Gruby serwer, szczup³y klient? O co tu chodzi?
+
+Gruby serwer -- g³ówny sk³adnik w aplikacji klient-serwer, po którego stronie
+dzieje siê wiêkszoœæ logiki programu. Maj¹ z regu³y wiêksze mo¿liwoœci od
+klienta, wiêksz¹ moc, pojemnoœæ itd. Szczup³y klient to czêsto sk³ada siê
+jedynie z warstwy odpowiedzialnej za interfejs u¿ytkownika i komunikacj¹ z
+serwerem.
 
 ----------------------------------------------------------------------------
 4. W¹tki u¿ytkownika a w¹tki j¹dra -- omów pokrótce ró¿nice miêdzy nimi. 
